@@ -18,7 +18,19 @@
   position: relative;
   padding-top: 1%;
   cursor: pointer;
-  transition: all 0.5 easa;
+  transition: all 250ms ease-in-out;
+}
+.container .switchDiv .switchContainer::before {
+  content: "Annually";
+  position: absolute;
+  left: -80px;
+  top: 5px;
+}
+.container .switchDiv .switchContainer::after {
+  content: "Monthly";
+  position: absolute;
+  right: -80px;
+  top: 5px;
 }
 .container .switchDiv .switchContainer .switch {
   display: block;

@@ -16,7 +16,18 @@
             padding: 
                 top: 1%
             cursor: pointer
-            transition: all 0.5 easa
+            transition: all 250ms ease-in-out
+            &::before
+                content: 'Annually'
+                position: absolute
+                left: -80px
+                top: 5px
+            &::after
+                content: 'Monthly'
+                position: absolute
+                right: -80px
+                top: 5px
+
             .switch
                 display: block
                 width: 42%
@@ -24,4 +35,3 @@
                 position: absolute
                 background-color: white
                 border-radius: 50%
-                
