@@ -1,42 +1,128 @@
-.container {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+body {
+  background-image: url(../images/bg-top.svg), url(../images/bg-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: top right, bottom left;
+  background-color: #f6f6fe;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+body .container {
   margin-top: 30px !important;
 }
-.container h1 {
+body .container h1 {
   text-align: center;
+  color: #6d708d;
+  font-size: 2.1em;
 }
-.container .switchDiv {
+body .container .switchDiv {
   margin: 0 auto;
   width: 60px;
   height: 30px;
 }
-.container .switchDiv .switchContainer {
+body .container .switchDiv .switchContainer {
   display: block;
   width: 100%;
   height: 100%;
-  background-color: red;
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
   border-radius: 30px;
   position: relative;
   padding-top: 1%;
   cursor: pointer;
-  transition: all 250ms ease-in-out;
 }
-.container .switchDiv .switchContainer::before {
+body .container .switchDiv .switchContainer::before {
   content: "Annually";
   position: absolute;
   left: -80px;
   top: 5px;
+  color: #b3b5c6;
 }
-.container .switchDiv .switchContainer::after {
+body .container .switchDiv .switchContainer::after {
   content: "Monthly";
   position: absolute;
   right: -80px;
   top: 5px;
+  color: #b3b5c6;
 }
-.container .switchDiv .switchContainer .switch {
+body .container .switchDiv .switchContainer .switch {
   display: block;
   width: 42%;
   height: 90%;
   position: absolute;
   background-color: white;
   border-radius: 50%;
+  transition: all 0.5s;
+}
+body .container .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+  margin-top: 100px;
+}
+body .container .cards .card {
+  background: #ffffff;
+  height: 450px;
+  text-align: center;
+  padding: 10px 40px;
+  color: #494c5f;
+  border-radius: 10px;
+}
+body .container .cards .card h2 {
+  font-size: 4em;
+  margin: 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d0d2dc;
+}
+body .container .cards .card hr {
+  color: #d0d2dc;
+  height: 1px;
+}
+body .container .cards .card a {
+  margin-top: 40px;
+  display: block;
+  padding: 15px;
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  text-decoration: none;
+  font-size: 0.84rem;
+  color: white;
+  transition: all 0.3s;
+  border-radius: 3px;
+}
+body .container .cards .card a:hover {
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 1px solid #494c5f;
+}
+body .container .cards .card p {
+  padding: 20px;
+  margin: 0;
+  border-bottom: 1px solid #d0d2dc;
+}
+body .container .cards .card:not(:nth-child(2)) {
+  margin: 25px 0;
+}
+body .container .cards .card:nth-child(2) {
+  height: 500px;
+  margin-bottom: 20px;
+  padding-top: 35px;
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: white;
+}
+body .container .cards .card:nth-child(2) a {
+  background: #fff;
+  color: #494c5f;
+}
+body .container .cards .card:nth-child(2) a:hover {
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  background-clip: none;
+  -webkit-text-fill-color: #fff;
+  border: 1px solid #fff;
+}
+
+@media (max-width: 1199px) {
+  .cards .card {
+    margin: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
